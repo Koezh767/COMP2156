@@ -1,25 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState } from "react";
+import StudentForm from "./components/StudentForm";
+import StudentList from "./components/StudentList";
 
-function App() {
+const App = () => {
+  const [students, setStudents] = useState([]);
+
+  const addStudent = (student) => {
+    setStudents([...students, student]);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Studen ID: Put Your Student ID</h1>
+      <h1>Studen ID: Put Your Student Name</h1>
+      <h1>Student Information System</h1>
+      <h5>Powered By: moxDroid Labs Inc. || DevOps</h5>
+      <StudentForm addStudent={addStudent} />
+      Developerd By: Pritesh Patel
+      <StudentList students={students} />
     </div>
   );
-}
+};
 
 export default App;
