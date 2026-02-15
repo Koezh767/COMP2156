@@ -1,3 +1,6 @@
+# GitHub Action Status Badge
+[![CI](https://github.com/Koezh767/COMP2156/actions/workflows/ci.yml/badge.svg)](https://github.com/Koezh767/COMP2156/actions/workflows/ci.yml)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
